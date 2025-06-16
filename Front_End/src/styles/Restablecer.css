@@ -1,0 +1,318 @@
+/* RecuperarPassword.css */
+.recovery-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4c430 0%, #e6b82a 50%, #d4a518 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recovery-container {
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.recovery-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(139, 21, 56, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.recovery-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b1538 0%, #a91d47 50%, #8b1538 100%);
+}
+
+.recovery-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.crown-logo {
+  background: linear-gradient(135deg, #8b1538 0%, #a91d47 100%);
+  color: #f4c430;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 25px rgba(139, 21, 56, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.recovery-header h1 {
+  color: #8b1538;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(139, 21, 56, 0.1);
+}
+
+.recovery-header p {
+  color: #6b4423;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.recovery-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: #8b1538;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  padding: 1rem;
+  border: 2px solid rgba(139, 21, 56, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #8b1538;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+.recovery-btn {
+  background: linear-gradient(135deg, #8b1538 0%, #a91d47 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(139, 21, 56, 0.3);
+}
+
+.recovery-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 21, 56, 0.4);
+}
+
+.recovery-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.recovery-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  animation: shake 0.5s ease-in-out;
+}
+
+.recovery-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(139, 21, 56, 0.1);
+}
+
+.recovery-footer p {
+  color: #6b4423;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.recovery-footer a,
+.link-btn {
+  color: #8b1538;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  transition: color 0.3s ease;
+}
+
+.recovery-footer a:hover,
+.link-btn:hover {
+  color: #a91d47;
+  text-decoration: underline;
+}
+
+/* Success Card Styles */
+.success-card {
+  text-align: center;
+}
+
+.success-icon {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+  animation: successPulse 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(139, 21, 56, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(139, 21, 56, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(139, 21, 56, 0.3);
+  }
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recovery-page {
+    padding: 0.5rem;
+  }
+  
+  .recovery-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .crown-logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .recovery-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .success-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recovery-card {
+    padding: 1.5rem 1rem;
+    margin: 0.5rem;
+  }
+  
+  .crown-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .recovery-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .recovery-header p {
+    font-size: 0.9rem;
+  }
+  
+  .input-group input {
+    padding: 0.875rem;
+  }
+  
+  .recovery-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
