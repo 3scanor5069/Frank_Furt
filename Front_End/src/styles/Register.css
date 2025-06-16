@@ -1,0 +1,297 @@
+/* Contenedor principal */
+.register-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7c2d12 0%, #92400e 50%, #7c2d12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  /* Tarjeta principal */
+  .register-card {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    width: 100%;
+    max-width: 28rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Elementos decorativos */
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+  }
+  
+  .register-card .circle-1 {
+    top: 0;
+    right: 0;
+    width: 7rem;
+    height: 7rem;
+    background: linear-gradient(135deg, #92400e, #7c2d12);
+    transform: translate(3.5rem, -3.5rem);
+  }
+  
+  .register-card .circle-2 {
+    bottom: 0;
+    left: 0;
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    transform: translate(-4rem, 4rem);
+  }
+  
+  /* Header */
+  .register-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #7c2d12, #92400e);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .register-icon .icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
+  
+  .register-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #7c2d12;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .register-subtitle {
+    color: #6b7280;
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Formulario */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 0.75rem;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .icon-small {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #9ca3af;
+  }
+  
+  .register-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .register-input:focus {
+    border-color: #7c2d12;
+    box-shadow: 0 0 0 3px rgba(124, 45, 18, 0.2);
+  }
+  
+  .name-row .register-input {
+    padding-left: 0.75rem;
+  }
+  
+  .register-input:not(.name-row .register-input) {
+    padding-left: 2.5rem;
+  }
+  
+  .password-input {
+    padding-right: 3rem !important;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.2s ease;
+  }
+  
+  .password-toggle:hover {
+    color: #6b7280;
+  }
+  
+  /* Checkbox de términos */
+  .terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.875rem;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    line-height: 1.4;
+  }
+  
+  .custom-checkbox {
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+    accent-color: #7c2d12;
+    flex-shrink: 0;
+  }
+  
+  .checkbox-text {
+    color: #6b7280;
+  }
+  
+  .terms-link {
+    color: #7c2d12;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .terms-link:hover {
+    color: #92400e;
+    text-decoration: underline;
+  }
+  
+  /* Botón principal */
+  .register-button {
+    width: 100%;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-button:hover {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Divisor */
+  .register-divider {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: #d1d5db;
+  }
+  
+  .divider-text {
+    padding: 0 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  /* Cambio de página */
+  .register-switch {
+    text-align: center;
+  }
+  
+  .switch-text {
+    color: #6b7280;
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  .switch-link {
+    color: #7c2d12;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .switch-link:hover {
+    color: #92400e;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .register-container {
+      padding: 0.5rem;
+    }
+    
+    .register-card {
+      padding: 1.5rem;
+    }
+    
+    .register-title {
+      font-size: 1.5rem;
+    }
+    
+    .name-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .register-form {
+      gap: 1.2rem;
+    }
+  }
